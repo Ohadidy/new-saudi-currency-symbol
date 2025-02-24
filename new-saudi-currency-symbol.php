@@ -1,12 +1,20 @@
 <?php
-/*
-Plugin Name:New Saudi currency symbol
-Plugin URI: https://github.com/Ohadidy/new-saudi-currency-symbol
-Description: Include the new Saudi Riyal symbol in the list of stores that have been approved on WooCommerce.
-Author: Omar Kamel
-Version: 1.0.0
-Author URI: https://www.linkedin.com/in/omarhadidy/
+/**
+ * Plugin Name:New Saudi currency symbol
+ * Plugin URI: https://github.com/Ohadidy/new-saudi-currency-symbol
+ * Description: Include the new Saudi Riyal symbol in the list of stores that have been approved on WooCommerce.
+ * Author: Omar Kamel
+ * Author URI: https://www.linkedin.com/in/omarhadidy/
+ * Version: 1.0.0
+ * Requires Plugins: woocommerce
+ * Tested up to: 6.7
+ * WC requires at least: 7.0
+ * WC tested up to: 9.5
+ * Elementor tested up to: 3.6.5
+ * Requires PHP: 7.0
 */
+defined( 'ABSPATH' ) || exit;
+
 if ( ! function_exists( 'new_saudi_currency_symbol' ) ) {
 	/**
 	 * Change a currency symbol
