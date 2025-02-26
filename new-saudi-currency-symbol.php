@@ -5,7 +5,7 @@
  * Description: Include the new Saudi Riyal symbol in the list of stores that have been approved on WooCommerce.
  * Author: Omar Kamel
  * Author URI: https://www.linkedin.com/in/omarhadidy/
- * Version: 1.0.0
+ * Version: 1.0.3
  * Requires Plugins: woocommerce
  * Tested up to: 6.7
  * WC requires at least: 7.0
@@ -33,6 +33,11 @@ if ( ! function_exists( 'new_saudi_currency_symbol' ) ) {
 	 * @return string $currency_symbol Updated currency symbol(s).
 	 */
 	function new_saudi_currency_symbol( $currency_symbol, $currency ) {
+		
+		if ( is_admin() ) {
+			return $currency_symbol;
+		}
+
 		switch ( $currency ) {
 			case 'SAR': $currency_symbol = '<svg class="riyal-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1124.14 1256.39" width="14" height="15.432" style="display:inline-block;vertical-align:-0.125em;">
       <path fill="currentColor" d="M699.62,1113.02h0c-20.06,44.48-33.32,92.75-38.4,143.37l424.51-90.24c20.06-44.47,33.31-92.75,38.4-143.37l-424.51,90.24Z"></path>
